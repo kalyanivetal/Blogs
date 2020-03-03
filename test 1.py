@@ -1,5 +1,5 @@
 def add(a,b):
-    continue
+    return a+b
 def sub(a,b)
     continue
 def mult(a,b):
