@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Git </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="https://kalyanivetal.github.io/about-me/" class="title">Kalyani Vetal</a>
+				<nav>
+					<ul>
+						<li><a href="https://kalyanivetal.github.io/blogs/">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Git- Branching</h1>
+							<span class="image fit"><img src="images/github.png" alt="" /></span>
+							<p>I hope now you guys do had practice upon basic command line interface with git. Assuming and  moving forward now will learn branching. <br>
+							If you are working on master  branch but you cant always keep modifying files on master branch in day to day life. What if instead we create another branch and merge it with master branch? Sounds good... :)  Let's learn then.<br><br>
+							If we are going to work on some feature then we are going to create a branch for the desired feature and the going to work on it.<br><br><span class="image fit"><img src="images/blog2-1.png" alt="" /></span>	
+							The syntax for creating a branch: <u>git branch branch-name</u> <br>Here we are going to create a branch divide-func. It's syntax would be: <u>git branch divide-func. </u>Now if you check by <u>git branch</u> then you will see our divide-func branch is there. There is * sign infront of master branch which means that we are currently on master branch.<br><br>Now we have created branch and we have to shift from master branch to newly created branch. Alright, So we have to do <u>git checkout divide-func</u> to shift between two branches.<br><br><span class="image fit"><img src="images/blog2-2.png" alt="" /></span>I have made changes in my test.py file. You can see it here. <br><u>git diff</u><br><u>git status</u><br><br><span class="image fit"><img src="images/blog2-3.png" alt="" /></span>you will see the changes that you have to commit.<br> I will add those changes to staging area using <u>git add -A </u> and then I'am going to commit all those changes by <u>git commit -m "modified-divide"</u> Important thing you will see here is we didnt made any changes to our master repository and also to our remote repository.<br><br><span class="image fit"><img src="images/blog2-4.png" alt="" /></span>I want to push this branch to our remote repository. Syntax: <u>git push -u origin divide-func</u><br>Use <u>git branch -a</u> to list out  all the branches. * is branch on which we are currently working upon.<br><br>We can see that all those changes have been working fine our local branch and this means that we are ready to merge our local branch with master branch. Fine :) Lets do it then. <br>First we will move to our master branch by <u>git checkout master</u> and always remember before commiting anything to master we should pull all the changes made to that repository so <u>git pull origin master</u>
+							<br><h3>Merging</h3>
+							First we will list merged branches if any using <u>git branch --merged </u> you will see that our divide-func branch won't come here because we havent merged it yet so far. So in order to merge that branch with master you do a <u> git merge divide-func</u> <br><br><span class="image fit"><img src="images/blog2-5.png" alt="" /></span><br>Remeber for merging any branch with master you must checkout to master branch and dont forget to check your current branch. You need to push all those changes made to master branch so you need to put <u>git push origin master</u><br><br>The thing is you can delete your locally created branch, and you just need to put <u>git branch -d divide-func</u><br><br><span class="image fit"><img src="images/blog2-6.png" alt="" /></span>Here you are done with Branching...! :)<br><br></p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Kalyani All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
