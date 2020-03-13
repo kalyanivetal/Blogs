@@ -5,4 +5,4 @@ def sub(a,b)
 def mult(a,b):
     continue
 def div(a,b):
-    continue
+    return a/b
