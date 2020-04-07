@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Git </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="https://kalyanivetal.github.io/about-me/" class="title">Kalyani Vetal</a>
+				<nav>
+					<ul>
+						<li><a href="https://kalyanivetal.github.io/blogs/">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major"> Git Stash </h1>
+		Hope you guys are doing good in Lockdown by self Qaurantining youself. So, Lets start learning git stash.<br>
+
+	<p>Suppose you are working on a file and because of some reasons you want to save your changes and go back to the files where you had last changes or last commit. Then the question is how to save them?<br> Well git has functionality by which you can save the changes and later pop it up when you need it. So here it is... <br>
+		<span class="image fit"><img src="images/gitstash2.png" alt="" /></span><br>
+	Suppose I'm working on add file and I made changes to it and I'm going to save those changes. <br> First I will create branch <u>git branch add</u> and checkout to my add branch by <u>git checkout add</u> then I will open test1.py and update it my making changes into add function. You can check the changes by doing <u> git diff</u><br>And here is main thing that you are going to do: <u>git stash save "looked in for add function"</u> and here it worked type <u>git diff</u> and <u>git status</u> you will see that nothing is left to commit and changes to the file that were made previoulsy have been restored.<br>	<br>
+			<span class="image fit"><img src="images/gits-31.png" alt="" /></span>Now all the changes are gone into stash and you can see that stash list by <u>git stash list</u> here you will see all the stashes list that you have made yet.<br><br>
+			<span class="image fit"><img src="images/gits-3.png" alt="" /></span>Here each stash has its Id <u>stash@{0}:</u> in this case '0' and after that there is msg for what you made that changes to stash. Now I'm going to take back these changes to my file. There are to ways to do: <u>git stash apply stash@{0}: </u> and after this you will all your changes that you put them into stack have been reverted.<br> But the thing is if you do <u>git stash list</u> that stash is still there and you wont get rid of that. <br> So the another way of doing it is instead of doing <u>git stash apply stash@{0}</u> just do <u>git stash pop </u> this will apply the changes of first stash that is in the list and it is going to drop/remove that stash  permenently from list. You can do that by <u>git stash pop</u>. You can recheck that by <u> git stash list</u> and changes have been applied to file.<br><br><span class="image fit"><img src="images/gits-4.png" alt="" /></span>Check them by <u>git diff</u>
+	<br>Now we have multiple stash into stash list then which one will pop first?<br>Here I have added to changes to the stack and I'm going to pop from them. <u>git stash pop</u> You can see it will pop last saved stash same as <r>STACK</b>in Data Structures.<br><br><span class="image fit"><img src="images/gits-7.png" alt="" /></span>You can check about popped stash by <u>git diff.</u> <br><br><span class="image fit"><img src="images/gits-8.png" alt="" /></span>Now how long you will put that changes in stack what if you want to delete it? Use git <u>git stash drop stash@{0}</u><br><br>
+	<span class="image fit"><img src="images/gits-9.png" alt="" /></span>and if you want to clear all the stash list then do <u>git stash clear</u><br><br><span class="image fit"><img src="images/gits-10.png" alt="" /></span>At the end you can check the status of your current branch : <br><br><span class="image fit"><img src="images/gits-6.png" alt="" /></span>Here was the brief overview of how to use stash and how it is useful.<h5><i>Thank You.</i></h5>
+</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Kalyani All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
